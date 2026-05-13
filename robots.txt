@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /carrinho.html
+
+Sitemap: https://tulipalingerie.com.br/sitemap.xml

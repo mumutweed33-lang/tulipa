@@ -1,0 +1,105 @@
+/* =====================================================
+   DESIGN TOKENS — TULIPA LINGERIE
+   Todas as variáveis centralizadas aqui
+   ===================================================== */
+
+:root {
+  /* ── Paleta principal ── */
+  --bordeaux: #6B0F1A;
+  --bordeaux-dark: #4A0A12;
+  --bordeaux-rgb: 107, 15, 26;
+  --gold: #C9A961;
+  --gold-light: #E8D4A8;
+  --gold-rgb: 201, 169, 97;
+  --nude: #E8C5C0;
+  --nude-light: #F5E6E3;
+  --nude-rgb: 232, 197, 192;
+  --black: #0A0908;
+  --offwhite: #FAF7F2;
+  --gray-soft: #D9D2CB;
+  --gray-medium: #A89F98;
+  --gray-dark: #6E655E;
+  --white: #FFFFFF;
+
+  /* ── Cores de produto ── */
+  --cor-vermelho: #C41E3A;
+  --cor-preto: #1A1818;
+  --cor-branco: #F8F4F0;
+  --cor-azul: #4A6FA5;
+  --cor-lila: #B39DDB;
+  --cor-coral: #E8856A;
+  --cor-nude: #D4A5A0;
+  --cor-rosa: #F48FB1;
+  --cor-bordo: #800020;
+
+  /* ── Sombras ── */
+  --shadow-luxo: 0 20px 60px rgba(107, 15, 26, 0.18);
+  --shadow-card: 0 8px 30px rgba(10, 9, 8, 0.07);
+  --shadow-card-hover: 0 24px 60px rgba(10, 9, 8, 0.14);
+  --shadow-gold: 0 4px 24px rgba(201, 169, 97, 0.35);
+  --shadow-sm: 0 2px 12px rgba(10, 9, 8, 0.08);
+
+  /* ── Tipografia ── */
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-accent: 'Italianno', cursive;
+
+  /* ── Escala de fontes fluida ── */
+  --fs-hero: clamp(3.25rem, 8.5vw, 6.5rem);
+  --fs-hero-em: clamp(3.75rem, 10vw, 7.5rem);
+  --fs-h1: clamp(2rem, 5vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.75rem);
+  --fs-h3: clamp(1.25rem, 2.5vw, 1.875rem);
+  --fs-h4: clamp(1.1rem, 2vw, 1.375rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fs-eyebrow: 0.6875rem;
+
+  /* ── Espaçamento ── */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --section: clamp(5rem, 10vw, 9rem);
+
+  /* ── Border radius ── */
+  --r-xs: 3px;
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-xl: 32px;
+  --r-full: 9999px;
+
+  /* ── Transições (easing curado) ── */
+  --ease-expo: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --t-fast: 0.18s;
+  --t-normal: 0.35s;
+  --t-slow: 0.6s;
+  --t-xslow: 0.9s;
+
+  /* ── Layout ── */
+  --max-w: 1440px;
+  --container-px: clamp(1.25rem, 5vw, 5rem);
+  --navbar-h: 72px;
+  --card-radius: var(--r-md);
+
+  /* ── Z-index ── */
+  --z-cursor: 9999;
+  --z-preloader: 9998;
+  --z-modal: 9000;
+  --z-navbar: 1000;
+  --z-overlay: 200;
+  --z-dropdown: 500;
+  --z-above: 10;
+}

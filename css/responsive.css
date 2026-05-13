@@ -1,0 +1,267 @@
+/* =====================================================
+   RESPONSIVO — TULIPA LINGERIE
+   Mobile-first: 375px → 768px → 1024px → 1440px
+   ===================================================== */
+
+/* ── 375px base (mobile) ── */
+@media (max-width: 767px) {
+
+  /* Oculta cursor customizado no touch */
+  #cursor-dot, #cursor-ring { display: none; }
+
+  /* Navbar */
+  .navbar__left { width: auto; }
+  .navbar__right { width: auto; gap: var(--sp-2); }
+
+  /* Oculta ícones extras no mobile */
+  .navbar__icon-btn.hide-mobile { display: none; }
+
+  /* Hero */
+  .hero-title { font-size: clamp(2.5rem, 10vw, 4.5rem); }
+  .hero-title em { font-size: clamp(2.8rem, 11vw, 5rem); }
+  .hero-ctas { flex-direction: column; align-items: center; gap: var(--sp-3); }
+  .hero-ctas .btn { width: 260px; justify-content: center; }
+  .scroll-indicator { display: none; }
+
+  /* Editorial */
+  .editorial__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  /* Catálogo */
+  #product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-5) var(--sp-3);
+  }
+
+  .catalog-toolbar { flex-direction: column; align-items: flex-start; }
+
+  .search-input { width: 100%; }
+  .search-wrap { width: 100%; }
+
+  .catalog-filters-wrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: var(--sp-2);
+    scrollbar-width: none;
+  }
+  .catalog-filters-wrap::-webkit-scrollbar { display: none; }
+  .filter-chip { flex-shrink: 0; }
+
+  /* Artesanato */
+  .artesanato__grid { grid-template-columns: 1fr; }
+  .artesanato__media { min-height: 300px; }
+  .artesanato__text { padding: var(--sp-10) var(--sp-6); }
+
+  /* Instagram */
+  .instagram__grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Newsletter */
+  .newsletter__form { flex-direction: column; }
+  .newsletter__form .btn { width: 100%; }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Cart */
+  .cart-item {
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--sp-3);
+  }
+
+  .cart-item__img { width: 70px; height: 90px; }
+  .cart-item__qty { grid-column: 2; }
+  .cart-item__total { grid-column: 2; text-align: left; }
+  .cart-item__remove { position: absolute; top: 0; right: 0; }
+  .cart-item { position: relative; }
+
+  /* Produto */
+  .product-gallery-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__thumbs {
+    flex-direction: row;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .gallery__thumbs::-webkit-scrollbar { display: none; }
+
+  .gallery__thumb { flex-shrink: 0; width: 70px; height: 85px; }
+
+  /* Grid relacionados */
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Sobre */
+  .about-hero { min-height: 50vh; }
+
+  /* Form rows */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Modal */
+  .modal__box {
+    padding: var(--sp-6);
+    border-radius: var(--r-lg);
+  }
+}
+
+/* ── 540px: single-column grid → 2 col ── */
+@media (max-width: 540px) {
+  #product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4) var(--sp-2);
+  }
+
+  .product-card__name { font-size: 0.9rem; }
+
+  .instagram__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── 768px tablet ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* Navbar: mostra todos os ícones */
+  .navbar__left { width: auto; }
+  .navbar__right { width: auto; }
+
+  /* Editorial: 1 coluna */
+  .editorial__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-8);
+  }
+
+  /* Catálogo: 2 colunas */
+  #product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-6) var(--sp-5);
+  }
+
+  /* Artesanato */
+  .artesanato__text {
+    padding: var(--sp-12) var(--sp-10);
+  }
+
+  /* Instagram */
+  .instagram__grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-8);
+  }
+
+  /* Produto: stack vertical */
+  .product-gallery-wrap {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .gallery__thumb { width: 80px; height: 96px; }
+
+  /* Related: 2 cols */
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── 1024px desktop ── */
+@media (min-width: 1024px) {
+
+  /* Menu mobile — esconde toggle */
+  .menu-toggle { display: none; }
+  #mobile-menu { display: none; }
+
+  /* Navbar — mostra links de desktop */
+  .navbar__desktop-links {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-8);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar__desktop-link {
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    color: var(--black);
+    letter-spacing: 0.05em;
+    transition: color var(--t-fast);
+    position: relative;
+  }
+
+  .navbar__desktop-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: var(--bordeaux);
+    transition: width var(--t-normal) var(--ease-expo);
+  }
+
+  .navbar__desktop-link:hover { color: var(--bordeaux); }
+  .navbar__desktop-link:hover::after { width: 100%; }
+
+  #navbar:not(.navbar--scrolled) .navbar__desktop-link { color: rgba(250,247,242,0.85); }
+  #navbar:not(.navbar--scrolled) .navbar__desktop-link::after { background: var(--gold); }
+  #navbar:not(.navbar--scrolled) .navbar__icon-btn { color: rgba(250,247,242,0.85); }
+  #navbar:not(.navbar--scrolled) .navbar__logo { color: var(--gold); }
+
+  /* Catálogo: 3 colunas */
+  #product-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Editorial: assimétrico */
+  .editorial__grid { grid-template-columns: 1.4fr 1fr; }
+
+  /* Instagram: 6 colunas */
+  .instagram__grid { grid-template-columns: repeat(6, 1fr); }
+
+  /* Footer: 4 colunas */
+  .footer__grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
+}
+
+/* ── 1440px large desktop ── */
+@media (min-width: 1440px) {
+  #product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── Telas muito grandes (4K) ── */
+@media (min-width: 2000px) {
+  :root { --container-px: 8rem; }
+  #product-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* ── Landscape mobile ── */
+@media (max-width: 812px) and (orientation: landscape) {
+  #hero { height: 100svh; min-height: 480px; }
+  .hero-title { font-size: clamp(2rem, 6vh, 4rem); }
+}
+
+/* ── High contrast mode ── */
+@media (forced-colors: active) {
+  .product-card__add-btn,
+  .btn-bordeaux { forced-color-adjust: none; }
+}
+
+/* ── Print ── */
+@media print {
+  #preloader, #navbar, #mobile-menu,
+  .marquee-banner, .newsletter, footer,
+  #cursor-dot, #cursor-ring,
+  .toast-container, .scroll-indicator { display: none !important; }
+
+  body { background: white; color: black; }
+  .product-card { break-inside: avoid; }
+}

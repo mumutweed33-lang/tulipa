@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nossa História — Tulipa Lingerie</title>
+  <meta name="description" content="A história da Tulipa Lingerie — lingerie artesanal feita à mão com amor em Santa Maria-DF. Conheça a mulher por trás de cada peça.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://tulipalingerie.com.br/sobre.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=Italianno&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    /* ── Valores ── */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-8);
+    }
+    @media (max-width: 768px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+
+    .value-card {
+      padding: var(--sp-8);
+      border: 1px solid var(--gray-soft);
+      border-radius: var(--r-lg);
+      text-align: center;
+      transition: border-color var(--t-normal), box-shadow var(--t-normal), transform var(--t-normal);
+    }
+
+    .value-card:hover {
+      border-color: var(--bordeaux);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-4px);
+    }
+
+    .value-card__icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--sp-4);
+      display: block;
+    }
+
+    .value-card__title {
+      font-family: var(--font-display);
+      font-size: var(--fs-h3);
+      font-weight: 500;
+      color: var(--bordeaux);
+      margin-bottom: var(--sp-3);
+    }
+
+    .value-card__text {
+      font-size: var(--fs-sm);
+      color: var(--gray-dark);
+      line-height: 1.8;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      position: relative;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--bordeaux), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 72px;
+      margin-bottom: var(--sp-12);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 16px; top: 4px;
+      width: 18px; height: 18px;
+      background: var(--bordeaux);
+      border-radius: 50%;
+      border: 3px solid var(--offwhite);
+      box-shadow: 0 0 0 2px var(--bordeaux);
+    }
+
+    .timeline-year {
+      font-family: var(--font-sans);
+      font-size: var(--fs-xs);
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: var(--sp-2);
+    }
+
+    .timeline-title {
+      font-family: var(--font-display);
+      font-size: var(--fs-h3);
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: var(--sp-3);
+    }
+
+    .timeline-text {
+      font-size: var(--fs-sm);
+      color: var(--gray-dark);
+      line-height: 1.8;
+    }
+
+    /* ── Seção de impacto com números ── */
+    .stats-section {
+      background: var(--bordeaux);
+      padding-block: var(--section);
+      text-align: center;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-8);
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .stat-item { padding: var(--sp-4); }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+      margin-bottom: var(--sp-2);
+    }
+
+    .stat-label {
+      font-size: var(--fs-sm);
+      color: rgba(250,247,242,0.7);
+      letter-spacing: 0.1em;
+    }
+
+    /* About hero decoration */
+    .about-hero-deco {
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      width: 45%;
+      overflow: hidden;
+      opacity: 0.08;
+    }
+  </style>
+</head>
+<body>
+  <a href="#sobre-conteudo" class="sr-only">Ir para o conteúdo</a>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav id="navbar" role="navigation" aria-label="Navegação principal">
+      <div class="navbar__left">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+      </div>
+      <a href="index.html" class="navbar__logo">
+        Tulipa
+        <span>Lingerie ✦ Santa Maria-DF</span>
+      </a>
+      <div class="navbar__desktop-links">
+        <a href="index.html#catalogo" class="navbar__desktop-link">Coleção</a>
+        <a href="sobre.html" class="navbar__desktop-link" aria-current="page">Nossa História</a>
+        <a href="index.html#newsletter" class="navbar__desktop-link">Contato</a>
+      </div>
+      <div class="navbar__right">
+        <button class="navbar__icon-btn" aria-label="Favoritos">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <a href="carrinho.html" class="navbar__icon-btn" aria-label="Sacola">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-badge" aria-label="Itens na sacola">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu navegação">
+    <nav class="mobile-menu__nav">
+      <a href="index.html" class="mobile-menu__link">Início</a>
+      <a href="index.html#catalogo" class="mobile-menu__link">Coleção</a>
+      <a href="sobre.html" class="mobile-menu__link">Nossa História</a>
+      <a href="carrinho.html" class="mobile-menu__link">Sacola</a>
+    </nav>
+    <p class="mobile-menu__footer">Santa Maria · Brasília-DF 🌷</p>
+  </div>
+  <div id="menu-overlay" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <main id="sobre-conteudo" tabindex="-1">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="about-hero" aria-label="Nossa história - Tulipa Lingerie">
+      <!-- Decoração de pétalas SVG -->
+      <div class="about-hero-deco" aria-hidden="true">
+        <svg viewBox="0 0 500 600" width="100%" height="100%">
+          <ellipse cx="250" cy="200" rx="120" ry="240" fill="white" transform="rotate(-15 250 200)" class="deco-petal"/>
+          <ellipse cx="350" cy="400" rx="80" ry="160" fill="white" transform="rotate(20 350 400)" class="deco-petal"/>
+          <ellipse cx="150" cy="450" rx="60" ry="120" fill="white" transform="rotate(-5 150 450)" class="deco-petal"/>
+        </svg>
+      </div>
+
+      <div class="container" style="position:relative;z-index:2">
+        <div class="about-hero__content">
+          <div class="about-hero__title anim-fade-in">Tulipa</div>
+          <h1 class="about-hero__subtitle anim-slide-up anim-delay-2">
+            Uma marca nascida do amor pela mulher brasileira e pela arte da lingerie artesanal.
+          </h1>
+          <div style="margin-top:2.5rem" class="anim-slide-up anim-delay-4">
+            <a href="index.html#catalogo" class="btn btn-outline-gold">
+              Ver a Coleção
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MANIFESTO ═══ -->
+    <section class="section" style="background:var(--offwhite)" aria-label="Nosso manifesto">
+      <div class="container" style="max-width:800px;text-align:center">
+        <span class="section-eyebrow reveal-up">Quem Somos</span>
+        <h2 class="section-title reveal-up" style="margin-top:0.5rem">
+          Cada peça nasce de<br><em>uma intenção.</em>
+        </h2>
+        <p class="reveal-up" style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:300;line-height:1.7;color:var(--gray-dark);margin-top:2rem;margin-inline:auto">
+          A Tulipa Lingerie nasceu do desejo de criar lingerie que vai além da estética — que toca a alma, que dá confiança, que celebra cada detalhe único do corpo feminino. Com raízes em Santa Maria-DF, levamos o artesanato brasileiro para um novo patamar de luxo e delicadeza.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══ VALORES ═══ -->
+    <section class="section" style="background:var(--nude-light)" aria-label="Nossos valores">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:var(--sp-12)">
+          <span class="section-eyebrow">Nosso DNA</span>
+          <h2 class="section-title" style="margin-top:0.5rem">O que nos <em>move.</em></h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-card reveal-up">
+            <span class="value-card__icon">🌷</span>
+            <h3 class="value-card__title">Artesanato</h3>
+            <p class="value-card__text">Cada peça é feita à mão com atenção máxima aos detalhes. Acreditamos que o tempo e o cuidado humano fazem toda a diferença no resultado final.</p>
+          </div>
+          <div class="value-card reveal-up anim-delay-2">
+            <span class="value-card__icon">💎</span>
+            <h3 class="value-card__title">Qualidade</h3>
+            <p class="value-card__text">Usamos apenas rendas importadas e materiais selecionados. A qualidade não é um detalhe — é a base de tudo que fazemos na Tulipa.</p>
+          </div>
+          <div class="value-card reveal-up anim-delay-3">
+            <span class="value-card__icon">❤</span>
+            <h3 class="value-card__title">Empoderamento</h3>
+            <p class="value-card__text">Acreditamos que a lingerie certa transforma. Cada peça que criamos é pensada para que você se sinta poderosa, confiante e linda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HISTÓRIA / TIMELINE ═══ -->
+    <section class="section" aria-label="Nossa linha do tempo">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:var(--sp-16)">
+          <span class="section-eyebrow">Nossa Jornada</span>
+          <h2 class="section-title" style="margin-top:0.5rem">Como tudo <em>começou.</em></h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2018</span>
+            <h3 class="timeline-title">O primeiro ponto</h3>
+            <p class="timeline-text">Tudo começou com agulha, linha e muita paixão. As primeiras peças foram criadas para amigas e familiares, que logo perceberam que havia algo muito especial naquela renda artesanal.</p>
+          </div>
+
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2020</span>
+            <h3 class="timeline-title">Tulipa nasce no Instagram</h3>
+            <p class="timeline-text">Com o perfil @tulipa__lingerie, a marca ganhou o Brasil através das redes sociais. As fotos cuidadosas e os produtos impecáveis fizeram a Tulipa crescer organicamente.</p>
+          </div>
+
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2022</span>
+            <h3 class="timeline-title">Expansão da coleção</h3>
+            <p class="timeline-text">A paleta de cores se expandiu: do bordeaux clássico ao lilás suave, do azul serenidade ao coral vibrante. Cada nova cor conta uma história diferente.</p>
+          </div>
+
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">Reconhecimento nacional</h3>
+            <p class="timeline-text">Com centenas de clientes satisfeitas em todo o Brasil, a Tulipa Lingerie se consolidou como referência em lingerie artesanal de luxo acessível.</p>
+          </div>
+
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2026</span>
+            <h3 class="timeline-title">Nossa loja online</h3>
+            <p class="timeline-text">Agora, com nossa loja digital, levamos o charme e a delicadeza da Tulipa para onde você estiver. A mesma dedicação, a mesma qualidade — agora com um clique.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ NÚMEROS ═══ -->
+    <section class="stats-section" aria-label="Nossos números">
+      <div class="container">
+        <div style="margin-bottom:var(--sp-12);text-align:center">
+          <span class="section-eyebrow" style="color:var(--gold)">Em números</span>
+          <h2 class="section-title" style="color:var(--offwhite);margin-top:0.5rem">
+            Amor em <em style="color:var(--gold-light)">cada detalhe.</em>
+          </h2>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-num" id="stat-pecas">500+</span>
+            <span class="stat-label">Peças criadas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" id="stat-clientes">300+</span>
+            <span class="stat-label">Clientes felizes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" id="stat-estados">26</span>
+            <span class="stat-label">Estados atendidos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" id="stat-anos">6+</span>
+            <span class="stat-label">Anos de amor artesanal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA FINAL ═══ -->
+    <section class="section" style="background:var(--offwhite);text-align:center" aria-label="Convite para explorar a coleção">
+      <div class="container" style="max-width:600px">
+        <span class="section-eyebrow reveal-up">Pronta?</span>
+        <h2 class="section-title reveal-up" style="margin-top:0.5rem">
+          Seja a melhor versão<br><em>de si mesma.</em>
+        </h2>
+        <p class="reveal-up" style="color:var(--gray-dark);margin-top:1.5rem;font-family:var(--font-display);font-style:italic;font-size:1.15rem;line-height:1.7">
+          Explore nossa coleção e encontre a peça que fala com a sua alma.
+        </p>
+        <div class="reveal-up" style="margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="index.html#catalogo" class="btn btn-bordeaux">
+            Explorar Coleção
+          </a>
+          <a href="https://www.instagram.com/tulipa__lingerie/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-bordeaux">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            Seguir no Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="footer__logo">Tulipa</a>
+          <p class="footer__tagline">Lingerie artesanal feita à mão com amor em Santa Maria-DF. Cada peça, uma história.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/tulipa__lingerie/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Loja</h3>
+          <ul class="footer__links">
+            <li><a href="index.html#catalogo" class="footer__link">Todos os produtos</a></li>
+            <li><a href="index.html#destaque" class="footer__link">Novidades</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Atendimento</h3>
+          <ul class="footer__links">
+            <li><a href="https://wa.me/5561999999999" target="_blank" rel="noopener noreferrer" class="footer__link">📱 WhatsApp</a></li>
+            <li><a href="mailto:contato@tulipalingerie.com.br" class="footer__link">✉ E-mail</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Endereço</h3>
+          <address class="footer__address">Santa Maria, Brasília-DF</address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Tulipa Lingerie. Feito com ♥ em Brasília.</p>
+        <p><a href="#">Privacidade</a> · <a href="#">Termos</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" crossorigin="anonymous"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
