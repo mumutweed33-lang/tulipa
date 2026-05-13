@@ -1,0 +1,9 @@
+.git
+.gitignore
+.vercel
+.claude
+.chrome-codex-profile
+.chrome-mini-profile
+.chrome-shot
+tmp_mobile_check.py
+README.md
